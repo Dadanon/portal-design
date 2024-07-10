@@ -1,0 +1,3 @@
+<template>
+   Мои группы
+   </template>

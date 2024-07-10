@@ -1,0 +1,5 @@
+<template>
+
+    Команды
+
+</template>

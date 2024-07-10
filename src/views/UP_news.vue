@@ -1,0 +1,3 @@
+<template>
+    Лента новостей
+   </template>

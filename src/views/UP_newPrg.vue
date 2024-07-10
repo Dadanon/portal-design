@@ -1,0 +1,4 @@
+<template>
+    Новый проект
+   </template>
+   
