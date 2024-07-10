@@ -19,6 +19,7 @@ const handleOpen = (key: string, keyPath: string[]) => {
 }
 const handleClose = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
+  console.log('test')
 }
 
 
