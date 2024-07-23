@@ -18,7 +18,7 @@
                         <el-radio :value="5">Реализован</el-radio>
                     </el-radio-group>
 
-    </el-tab-pane>
+        </el-tab-pane>
         <el-tab-pane label="Блок-схемы" name="sx">
             Блок-схемы
         </el-tab-pane>

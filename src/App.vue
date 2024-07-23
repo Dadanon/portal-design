@@ -1,7 +1,10 @@
+
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import TopView from '@/views/TopView.vue'
 import { ref } from 'vue'
+import 'element-plus/theme-chalk/display.css'
+import type { ImageProps } from 'element-plus'
 import {
   Document,
   Menu as IconMenu,
@@ -11,197 +14,178 @@ import {
   Reading,
   Timer,
   DocumentAdd,
+  Menu,
+  QuestionFilled,
+  House,
+  HomeFilled,
 } from '@element-plus/icons-vue'
 
-const isCollapse = ref(true)
-const handleOpen = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
-const handleClose = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-  console.log('test')
-}
+const fits = [
+  'fill',
+  'contain',
+  'cover',
+  'none',
+  'scale-down',
+] as ImageProps['fit'][]
+const url_logo =
+  '/urbanset_logo.png'
 
+const drawer = ref(false)
 
-interface Tree {
-  label: string
-  children?: Tree[]
-}
-
-const handleNodeClick = (data: Tree) => {
-  console.log(data)
-}
-
-const data: Tree[] = [
-  {
-    label: 'Мои проекты',
-    children: [
-      {
-        label: 'Проект-1',
-        children: [
-          {
-            label: 'Проект-1 Подпроект 1',
-            children: [
-              {
-                label: 'Проект-1 Подпроект 1-2',
-              },
-              {
-                label: 'Проект-1 Подпроект 1-2',
-                children: [
-                  {
-                    label: 'Проект-1 Подпроект 1-2-1',
-                  },
-                  {
-                    label: 'Проект-1 Подпроект 1-2-2',
-                    children: [
-                      {
-                        label: 'Проект-1 Подпроект 1-2-2-1',
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        label: 'Проект-2',
-        children: [
-          {
-            label: 'Проект-2 Подпроект 1',
-          },
-          {
-            label: 'Проект-2 Подпроект 2',
-          },          
-        ],
-      },      
-    ],
-  },
-  {
-    label: 'Мои команды',
-    children: [
-      {
-        label: 'Фрязино forever',    
-      },
-      {
-        label: 'Монино',    
-      },      
-    ],
-  },
-  {
-    label: 'Мои группы',
-    children: [
-      {
-        label: 'Группа 1',    
-      },
-      {
-        label: 'Группа 2',    
-      },      
-    ],
-  },
-]
-
-const defaultProps = {
-  children: 'children',
-  label: 'label',
-}
 </script>
 
 
 
 <template>
-  <div class="common-layout">
-    <el-container>
-      <el-aside >
 
-        <el-row class="tac">
-          <el-col :span="12">
-            <h5 class="mb-2">Default colors</h5>
-            <el-menu
-              default-active="6"
+<el-drawer v-model="drawer" title="Меню">
+  <div class="grid-content hidden-md-and-up head_line" >
+          <el-icon><HomeFilled /></el-icon> | Сообщества | Проекты | Запросы | Предложения | <el-icon><Location /></el-icon>Карта
+    </div>
+
+<el-menu
+              
               class="el-menu-vertical-demo"
               @open="handleOpen"
               @close="handleClose"
+              default-active="2"
+              router="true"
               >
               
-                 <el-menu-item index="1" @click="$router.push('/up_newprg')">
-                    <el-icon><DocumentAdd /></el-icon>
-                    <span>Новый проект</span>
+                 <el-menu-item index="/up_newprg">
+                  <el-icon><DocumentAdd /></el-icon><span class="txt_in_menu"> Новый проект </span>
                   </el-menu-item>
-                  <el-sub-menu index="2">
-                    <template #title>
-                      <el-icon><location /></el-icon>
-                      <span>Мои проекты</span>
-                    </template>
-
-                    <el-sub-menu index="2-4" @click="$router.push('/up_editprg')">
-                      <template #title>Проект 1</template>
-                      <el-menu-item index="2-4-1" @click="$router.push('/up_task')">Проект 1 подпроект 1</el-menu-item>
-                      <el-sub-menu index="2-4-2" @click="$router.push('/up_editprg')">
-                        <template #title>Проект 1 подпроект 2</template>
-                        <el-menu-item index="2-4-2-1" @click="$router.push('/up_task')">Подпроект 1-2-1</el-menu-item>
-                        <el-menu-item index="2-4-2-2" @click="$router.push('/up_task')">Подпроект 1-2-2</el-menu-item>
+                  <el-menu-item-group> <template #title class="name_group_in_menu"><el-icon><Location /></el-icon> Мои проекты</template>
+                  <el-sub-menu index="/up_editprg">
+                    <template #title><span class="txt_in_menu">Проект 0</span></template>
+                    <el-sub-menu index="/up_editprg">
+                      <template #title><span class="txt_in_menu">Проект 1</span></template>
+                      <el-menu-item index="/up_editprg"><span class="txt_in_menu">Проект 1 подпроект 1</span></el-menu-item>
+                      <el-sub-menu index="/up_editprg">
+                        <template #title><span class="txt_in_menu">Проект 1 подпроект 2</span></template>
+                        <el-menu-item index="/up_editprg"><span class="txt_in_menu">Подпроект 1-2-1</span></el-menu-item>
+                        <el-menu-item index="/up_editprg"><span class="txt_in_menu">Подпроект 1-2-2</span></el-menu-item>
+                        <el-sub-menu index="/up_editprg">
+                            <template #title><span class="txt_in_menu">Подпроект 1-2-2-1</span></template>
+                            <el-menu-item index="/up_editprg"><span class="txt_in_menu">Подпроект 1-2-2-1-1</span></el-menu-item>
+                        </el-sub-menu>
                       </el-sub-menu>
                     </el-sub-menu>
-                    <el-menu-item index="2-2" @click="$router.push('/up_task')">Проект 2</el-menu-item>
+                    <el-menu-item index="/up_editprg"><span class="txt_in_menu">Проект 2</span></el-menu-item>
                   </el-sub-menu>
-                  <el-sub-menu index="3">
+                </el-menu-item-group>
+                <el-menu-item-group> <template #title class="name_group_in_menu"><el-icon><Location /></el-icon> Мои команды</template>
+                  <el-sub-menu index="/up_command">
                     <template #title>
-                    <el-icon><location /></el-icon>
-                    <span>Мои команды</span>
+                    <span class="txt_in_menu">Команда 0</span>
                     </template>
-                    <el-menu-item index="3-1" @click="$router.push('/up_command')">Фрязино forever</el-menu-item>
-                    <el-menu-item index="3-2" @click="$router.push('/up_command')">Щелково</el-menu-item>
+                    <el-menu-item index="/up_command"><span class="txt_in_menu">Фрязино forever</span></el-menu-item>
+                      <el-sub-menu index="/up_command">
+                        <template #title><span class="txt_in_menu">Боровичи 1 </span></template>
+                        <el-menu-item index="/up_command"><span class="txt_in_menu">Боровичи 1-1</span></el-menu-item>
+                        <el-menu-item index="/up_command"><span class="txt_in_menu">Боровичи 1-2</span></el-menu-item>
+                        <el-sub-menu index="/up_command">
+                            <template #title><span class="txt_in_menu">Боровичи 1-2-1</span></template>
+                            <el-menu-item index="/up_command"><span class="txt_in_menu">Боровичи набережная</span></el-menu-item>
+                        </el-sub-menu>
+                      </el-sub-menu>
+                    <el-menu-item index="/up_command"><span class="txt_in_menu">Щелково</span></el-menu-item>
                   </el-sub-menu>
-                  <el-sub-menu index="4">
-                    <template #title>
-                    <el-icon><location /></el-icon>
-                    <span>Мои группы</span>
-                    </template>
-                    <el-menu-item index="4-1" @click="$router.push('/up_group')">Группа 1</el-menu-item>
-                    <el-menu-item index="4-2" @click="$router.push('/up_group')">Группа 2</el-menu-item>
+                </el-menu-item-group>
+                <el-menu-item-group> <template #title class="name_group_in_menu"><el-icon><Location /></el-icon> Мои группы</template>
+                  <el-sub-menu index="19">
+                    <template #title><span class="txt_in_menu">Группа 0</span></template>
+                    <el-menu-item index="/up_group"><span class="txt_in_menu">Группа 1</span></el-menu-item>
+                    <el-menu-item index="/up_group"><span class="txt_in_menu">Группа 2</span></el-menu-item>
                   </el-sub-menu>
-                  <el-menu-item index="5"  @click="$router.push('/up_task')">
+                </el-menu-item-group>
+                  <el-menu-item index="/up_task">
                     <el-icon><timer /></el-icon>
                     <span>Задачи</span>
                   </el-menu-item>
-                  <el-menu-item index="6"  @click="$router.push('/up_news')">
+                  <el-menu-item index="/up_news">
                     <el-icon><reading /></el-icon>
                     <span>Лента новостей</span>
                   </el-menu-item>
-                  <el-menu-item index="7" @click="$router.push('/up_main')">
+                  <el-menu-item index="/up_main">
                     <el-icon><user /></el-icon>
                     <span>Аккаунт</span>
                   </el-menu-item>
             </el-menu>
-          </el-col>
-        </el-row>
-  </el-aside>
-      <el-container>
-        <el-header>
-          <TopView />
-        </el-header>
-        <el-main>
 
-          <RouterView />
-        </el-main>
-        <el-footer>Footer</el-footer>
-      </el-container>
-    </el-container>
+    
+  </el-drawer>
+
+  <div class="portal-header">
+    <div class="portal-logo">
+      <el-image :src="url_logo" :fit="fill" />
+    </div>
+    <div class="portal-title">
+      <h2 class="adapt-h" style="margin-top: 0; height: 100%;">ПЛАТФОРМА РАЗВИТИЯ ГОРОДОВ</h2>
+    </div>
   </div>
+
+ <!-- <el-row style="height: 100%!important">
+    <el-col :span="4" style="height: 100%!important; margin: 0">
+      <div class="grid-content tmp_edit">
+        <el-image :src='url-logo' :fit="fit" />
+      </div>
+    </el-col>
+    <el-col :span="20"><div class="grid-content tmp_edit">
+        <H2 class="adapt-h ">ПЛАТФОРМА РАЗВИТИЯ ГОРОДОВ</H2>
+    </div></el-col>    
+ </el-row>      -->
+
+ <el-affix :offset="0">
+    <el-row align="middle" class="head_line">
+        <el-col :span="18"><div class="grid-content hidden-sm-and-down" >
+          <el-icon><HomeFilled /></el-icon> | Сообщества | Проекты | Запросы | Предложения | <el-icon><Location /></el-icon>Карта
+        </div></el-col>
+        <el-col :span="6"><div class="grid-content head_line_but">
+
+            <el-button type="default" circle="true" class="head_but" :icon="QuestionFilled" @click="$router.push('/up_command')" />          
+            <el-badge :value="12" class="top_att"><el-button type="default" circle="true" class="head_but_badge" :icon="User" @click="$router.push('/up_main')" /></el-badge>                    
+            <el-button type="default" circle="true" class="head_but" :icon="Menu" @click="drawer = true" />
+        </div></el-col>
+    </el-row>          
+  </el-affix>
+
+  <el-row class="u_main">
+    <el-col :span="24"><div class="grid-content">
+      <RouterView />     
+    </div></el-col>
+ </el-row>          
+
+
 </template>
 
+<style scoped>
+.portal-header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: start;
+  background-color: #fff;
 
-<style>
-.el-menu-vertical-demo:not(.el-menu--collapse) {
+  .portal-logo {
+    width: 20%;
+    height: 100%;
+  }
 
-  min-height: 400px;
+  .portal-title {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 80%;
+    height: 100%;
+  }
 }
 </style>
 
 
 
-<script lang="ts" setup>
 
-</script>
+
+
+
+

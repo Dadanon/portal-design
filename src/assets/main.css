@@ -1,12 +1,124 @@
 @import './base.css';
 
+@font-face {
+	font-family: 'Poiret_One';
+	src: url('/fonts/poiret_one.eot'); /* IE 9 Compatibility Mode */
+	src: url('/fonts/poiret_one.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('/fonts/poiret_one.woff2') format('woff2'), /* Super Modern Browsers */
+		url('/fonts/poiret_one.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('/fonts/poiret_one.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('/fonts/poiret_one.svg#poiret_one') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+@font-face {
+	font-family: 'DidactGothic';
+	src: url('/fonts/didactgothic.eot'); /* IE 9 Compatibility Mode */
+	src: url('/fonts/didactgothic.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('/fonts/didactgothic.woff2') format('woff2'), /* Super Modern Browsers */
+		url('/fonts/didactgothic.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('/fonts/didactgothic.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('/fonts/didactgothic.svg#didactgothic') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+body {
+  font-family: 'DidactGothic', sans-serif;
+  background-color: #ffffff; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+  font-weight: 500;
+  line-height: 1.3;
+  font-family: "Poiret_One"; }
+
+  @media (min-width: 300px) {
+    .adapt-h {
+      font-size: 25px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .adapt-h {
+      font-size: 30px;
+    }
+  }
+  /* на md */
+  @media (min-width: 992px) {
+    .adapt-h {
+      font-size: 40px;
+    }
+  }
+  /* на lg */
+  @media (min-width: 1200px) {
+    .adapt-h {
+      font-size: 45px;
+    }
+  }
+
+  .adapt-h {
+    margin-left: 30px;
+    margin-bottom: 0px;
+  }  
+
+.tmp_edit {
+  background-color: #8aa181;
+}
+
+.margin_but_10 {
+  margin-bottom: 20px;
+}
+
+.top_att {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
 #app {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+
   font-weight: normal;
 }
 
+.u_header {
+  background: #ffffff;
+  padding: 0px;
+  margin: 0px;
+}
+.u_aside {
+  background: #8aa181;
+}
+.u_main {
+  background: #ffffff;
+}
+.u_footer {
+  background: #a08b97;
+}
+.head_but {
+margin-left: 15px;
+margin-top: 15px;
+}
+
+.margin_top_10 {
+  margin-top: 10px;
+}
+
+.head_but_badge {
+
+  }
+
+.head_line_but {
+    text-align: right;
+}
+.head_line {
+  border-bottom: 1px solid #000000;
+  background: #ffffff;
+  padding-bottom: 5px;
+  height: 50px;
+}
 a,
 .green {
   text-decoration: none;
