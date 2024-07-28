@@ -77,7 +77,7 @@
                         </div></el-col>                        
                     </el-row>           
                     <el-row class="margin_but_10">
-                      <el-col :xs="2" :sm="2" :md="1" :lg="1" :xl="1" class="border_right">
+                      <el-col :xs="2" :sm="2" :md="2" :lg="1" :xl="1" class="border_right">
                         <el-button-group>
                             <el-tooltip
                             class="box-item"
@@ -85,7 +85,7 @@
                             content="Написать личное сообщение"
                             placement="bottom-start"
                           >
-                          <el-button size="large" type="text" plain :icon="Message"  />
+                          <el-button type="text" plain :icon="Message"  />
                           </el-tooltip>                                                           
                             <el-tooltip
                             class="box-item"
@@ -93,7 +93,7 @@
                             content="Ответить"
                             placement="bottom-start"
                           >
-                          <el-button size="large" type="text" plain :icon="Back" />
+                          <el-button type="text" plain :icon="Back" />
                           </el-tooltip>                                 
                           <el-tooltip
                             class="box-item"
@@ -101,13 +101,13 @@
                             content="Цитировать"
                             placement="bottom-start"
                           >
-                          <el-button size="large" type="text" plain :icon="Right" />
+                          <el-button type="text" plain :icon="Right" />
                           </el-tooltip>                               
                          </el-button-group>  
                       </el-col>
-                      <el-col :xs="22" :sm="22" :md="23" :lg="23" :xl="23" class="under_line">
+                      <el-col :xs="22" :sm="22" :md="22" :lg="23" :xl="23" class="under_line">
                         <span class="txt_in_message margin_left_10">
-                          Сообщение пользователя. Вставляем картинки, файлы ... 
+                          22Сообщение пользователя. Вставляем картинки, файлы ... 
                         </span>
                       </el-col>                    
                     </el-row>                                                                                       
@@ -153,7 +153,7 @@
                         </div></el-col>                        
                     </el-row>           
                     <el-row class="margin_but_10">
-                      <el-col :offset="1" :xs="2" :sm="2" :md="1" :lg="1" :xl="1" class="border_right">
+                      <el-col :offset="1" :xs="2" :sm="2" :md="2" :lg="1" :xl="1" class="border_right">
                         <el-button-group>
                             <el-tooltip
                             class="box-item"
@@ -161,7 +161,7 @@
                             content="Написать личное сообщение"
                             placement="bottom-start"
                           >
-                          <el-button size="large" type="text" plain :icon="Message"  />
+                          <el-button type="text" plain :icon="Message"  />
                           </el-tooltip>                                                           
                             <el-tooltip
                             class="box-item"
@@ -169,7 +169,7 @@
                             content="Ответить"
                             placement="bottom-start"
                           >
-                          <el-button size="large" type="text" plain :icon="Back" />
+                          <el-button type="text" plain :icon="Back" />
                           </el-tooltip>                                 
                           <el-tooltip
                             class="box-item"
@@ -177,11 +177,11 @@
                             content="Цитировать"
                             placement="bottom-start"
                           >
-                          <el-button size="large" type="text" plain :icon="Right" />
+                          <el-button type="text" plain :icon="Right" />
                           </el-tooltip>                               
                          </el-button-group>  
                       </el-col>
-                      <el-col :xs="21" :sm="21" :md="22" :lg="22" :xl="22" class="under_line">
+                      <el-col :xs="21" :sm="21" :md="21" :lg="22" :xl="22" class="under_line">
                         <span class="txt_in_message margin_left_10">
                           Ответное сообщение пользователя
                         </span>
@@ -229,7 +229,7 @@
                         </div></el-col>                        
                     </el-row>           
                     <el-row class="margin_but_10">
-                      <el-col :xs="2" :sm="2" :md="1" :lg="1" :xl="1" class="border_right">
+                      <el-col :xs="2" :sm="2" :md="2" :lg="1" :xl="1" class="border_right">
                         <el-button-group>
                             <el-tooltip
                             class="box-item"
@@ -237,7 +237,7 @@
                             content="Написать личное сообщение"
                             placement="bottom-start"
                           >
-                          <el-button size="large" type="text" plain :icon="Message"  />
+                          <el-button type="text" plain :icon="Message"  />
                           </el-tooltip>                                                           
                             <el-tooltip
                             class="box-item"
@@ -245,7 +245,7 @@
                             content="Ответить"
                             placement="bottom-start"
                           >
-                          <el-button size="large" type="text" plain :icon="Back" />
+                          <el-button type="text" plain :icon="Back" />
                           </el-tooltip>                                 
                           <el-tooltip
                             class="box-item"
@@ -253,16 +253,18 @@
                             content="Цитировать"
                             placement="bottom-start"
                           >
-                          <el-button size="large" type="text" plain :icon="Right" />
+                          <el-button type="text" plain :icon="Right" />
                           </el-tooltip>                               
                          </el-button-group>  
                       </el-col>
-                      <el-col :xs="22" :sm="22" :md="23" :lg="23" :xl="23" class="under_line">
+                      <el-col :xs="22" :sm="22" :md="22" :lg="23" :xl="23" class="under_line">
                         <span class="txt_in_message margin_left_10">
                           Сообщение пользователя. Вставляем картинки, файлы ... 
                         </span>
                       </el-col>                    
                     </el-row>       
+                                      
+      
                     <el-row>
                       <el-col>
                         <el-button type="primary" class="normal_but" @click="$router.push('/root_see_prez_comment')">Перейти на страницу комментариев</el-button>
