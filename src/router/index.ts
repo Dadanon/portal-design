@@ -16,6 +16,7 @@ import ROOT_tender from '../views/ROOT_tender.vue'
 import ROOT_like from '../views/ROOT_like.vue'
 import ROOT_help from '../views/ROOT_help.vue'
 import ROOT_see_prez from '../views/ROOT_see_prez.vue'
+import ROOT_see_prez_comment from '../views/ROOT_see_prez_comment.vue'
 import HELP_prg from '../views/HELP_prg.vue'
 import HELP_maps from '../views/HELP_maps.vue'
 import HELP_sx from '../views/HELP_sx.vue'
@@ -26,6 +27,11 @@ import HELP_group from '../views/HELP_group.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/root_see_prez_comment',
+      name: 'ROOT_see_prez_comment',
+      component: ROOT_see_prez_comment
+    },  
     {
       path: '/root_see_prez',
       name: 'ROOT_see_prez',

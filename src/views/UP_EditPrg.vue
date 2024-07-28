@@ -58,7 +58,7 @@
                           </el-tooltip>     
                           <br/><el-button type="text" @click="$router.push('/root_see_prez')" style="color: black">Перейти на страницу презентации <el-icon><DArrowRight /></el-icon></el-button>                     
                           <br/><el-badge class="mark" :value="12">
-                            <el-button type="text" @click="$router.push('/help_prg')" style="color: black">Перейти на страницу комментариев <el-icon><DArrowRight /></el-icon></el-button>
+                            <el-button type="text" @click="$router.push('/root_see_prez_comment')" style="color: black">Перейти на страницу комментариев <el-icon><DArrowRight /></el-icon></el-button>
                           </el-badge>
                         </div></el-col>
                     </el-row>                     
@@ -118,39 +118,55 @@
                         <span class="txt_big_size">Действия участников команды:</span>
                         </div></el-col>
                     </el-row>                     
-                    <el-row>
-                      <el-col :xs="5" :sm="5" :md="3" :lg="2" :xl="2"><div class="grid-content">
-                        <el-image class="user_avatar_circle" :src="user_cir_avatar" :fit="fit" />
-                      </div></el-col>
-                      <el-col :xs="7" :sm="7" :md="4" :lg="4" :xl="4"><div class="grid-content" style="height: 100%; align-content: center;">
-                        <span>Владимир Ильич Ленин</span>
-                      </div></el-col>                      
-                      <el-col :xs="7" :sm="7" :md="6" :lg="10" :xl="10"><div class="grid-content" style="height: 100%; align-content: center;">
-                        2024.12.15 15:28  &nbsp;<el-icon><Delete /></el-icon>
-                      </div></el-col>
+                    <el-row class="user_small_kard" align="middle">
+                        <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3"><div class="grid-content">
+                          <el-image class="user_avatar_sm_circle" :src="user_cir_avatar" :fit="fit" />
+                        </div></el-col>
+                        <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6"><div class="grid-content">
+                            <span class="txt_in_sm_kard">Владимир Ильич Ленин</span>
+                        </div></el-col>
+                        <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4"><div class="grid-content">
+                            <span class="txt_in_sm_kard">2024.12.15 15:30</span>
+                        </div></el-col>
+                        <el-col :xs="1" :sm="1" :md="1" :lg="1" :xl="1"><div class="grid-content">
+                            <el-tooltip
+                            class="box-item"
+                            effect="dark"
+                            content="Удалить это изменение"
+                            placement="bottom-start"
+                          >
+                          <el-button type="text" plain :icon="Delete" class="but_in_users_sm_kard" />
+                          </el-tooltip>                                 
+                        </div></el-col>                        
+                    </el-row>    
+                    <el-row class="user_small_kard" align="middle">
+                        <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3"><div class="grid-content">
+                          <el-image class="user_avatar_sm_circle" :src="user_cir_avatar" :fit="fit" />
+                        </div></el-col>
+                        <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6"><div class="grid-content">
+                            <span class="txt_in_sm_kard">Владимир Ильич Ленин</span>
+                        </div></el-col>
+                        <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4"><div class="grid-content">
+                            <span class="txt_in_sm_kard">2024.12.15 15:30</span>
+                        </div></el-col>
+                        <el-col :xs="1" :sm="1" :md="1" :lg="1" :xl="1"><div class="grid-content">
+                                                        
+                        </div></el-col>                        
                     </el-row> 
-                    <el-row>
-                      <el-col :xs="5" :sm="5" :md="3" :lg="2" :xl="2"><div class="grid-content">
-                        <el-image class="user_avatar_circle" :src="user_cir_avatar" :fit="fit" />
-                      </div></el-col>
-                      <el-col :xs="7" :sm="7" :md="4" :lg="4" :xl="4"><div class="grid-content" style="height: 100%; align-content: center;">
-                        <span>Владимир Ильич Ленин</span>
-                      </div></el-col>                      
-                      <el-col :xs="7" :sm="7" :md="6" :lg="10" :xl="10"><div class="grid-content" style="height: 100%; align-content: center;">
-                        2024.12.15 15:28
-                      </div></el-col>
-                    </el-row> 
-                    <el-row>
-                      <el-col :xs="5" :sm="5" :md="3" :lg="2" :xl="2"><div class="grid-content">
-                        <el-image class="user_avatar_circle" :src="user_cir_avatar" :fit="fit" />
-                      </div></el-col>
-                      <el-col :xs="7" :sm="7" :md="4" :lg="4" :xl="4"><div class="grid-content" style="height: 100%; align-content: center;">
-                        <span>Владимир Ильич Ленин</span>
-                      </div></el-col>                      
-                      <el-col :xs="7" :sm="7" :md="6" :lg="10" :xl="10"><div class="grid-content" style="height: 100%; align-content: center;">
-                        2024.12.15 15:28
-                      </div></el-col>
-                    </el-row>                     
+                    <el-row class="user_small_kard" align="middle">
+                        <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3"><div class="grid-content">
+                          <el-image class="user_avatar_sm_circle" :src="user_cir_avatar" :fit="fit" />
+                        </div></el-col>
+                        <el-col :xs="6" :sm="6" :md="6" :lg="6" :xl="6"><div class="grid-content">
+                            <span class="txt_in_sm_kard">Владимир Ильич Ленин</span>
+                        </div></el-col>
+                        <el-col :xs="4" :sm="4" :md="4" :lg="4" :xl="4"><div class="grid-content">
+                            <span class="txt_in_sm_kard">2024.12.15 15:30</span>
+                        </div></el-col>
+                        <el-col :xs="1" :sm="1" :md="1" :lg="1" :xl="1"><div class="grid-content">
+                                                        
+                        </div></el-col>                        
+                    </el-row>                    
                     <el-row  align="middle">
                       <el-col :xs="20" :sm="6" :md="5" :lg="4" :xl="3"><div class="grid-content">
                         <el-button type="primary" class="normal_but" :icon="Delete" disabled>Удалить проект</el-button>
@@ -158,7 +174,7 @@
                       <el-col :xs="7" :sm="7" :md="6" :lg="6" :xl="5"><div class="grid-content" style="height: 100%; align-content: center;">
                         <span>Право на удаление этого проекта:</span>
                       </div></el-col>                      
-                      <el-col :xs="3" :sm="2" :md="2" :lg="2" :xl="1"><div class="grid-content" style="height: 100%; align-content: center;">
+                      <el-col :xs="3" :sm="2" :md="2" :lg="2" :xl="2"><div class="grid-content" style="height: 100%; align-content: center;">
                         <el-image class="user_avatar_sm_circle" :src="user_cir_avatar" />
                       </div></el-col>                      
                       <el-col :xs="7" :sm="7" :md="4" :lg="6" :xl="10"><div class="grid-content" style="height: 100%; align-content: center;">
@@ -225,7 +241,7 @@
                           </el-tooltip>     
                           <br/><el-button type="text" @click="$router.push('/root_see_prez')" style="color: black">Перейти на страницу презентации <el-icon><DArrowRight /></el-icon></el-button>                     
                           <br/><el-badge class="mark" :value="12">
-                            <el-button type="text" @click="$router.push('/help_prg')" style="color: black">Перейти на страницу комментариев <el-icon><DArrowRight /></el-icon></el-button>
+                            <el-button type="text" @click="$router.push('/root_see_prez_comment')" style="color: black">Перейти на страницу комментариев <el-icon><DArrowRight /></el-icon></el-button>
                           </el-badge>
                         </div></el-col>              
             <el-row>

@@ -1,41 +1,19 @@
 <template>
-                    <el-row>
-                        <el-col :span="24"><div class="grid-content">
-                            <h1>Название проекта/запроса/предложения</h1>
-                        </div></el-col>
-                    </el-row>     
-                    <el-row>
-                        <el-col :span="24"><div class="grid-content">
-                            <h2>Показатели проекта:</h2>
-                            <span>
-                                Блок показателей проекта<br />
-                                Блок показателей проекта<br />
-                            </span>
-                        </div></el-col>
-                    </el-row>              
-                    <el-row style="margin: 10px;">
-                        <el-col :span="1"><div class="grid-content">
-                                <el-image :src="icon_sx_01" />
-                        </div></el-col>
-                        <el-col :span="23"><div class="grid-content" style="height: 100%; align-content: center;">
-                            <el-button type="text" style="color: black">&nbsp;Схема проектов застройки участков<el-icon><DArrowRight /></el-icon></el-button>
-                        </div></el-col>                        
-                    </el-row>             
-                    <el-row style="margin: 10px;">
-                        <el-col :span="1"><div class="grid-content">
-                                <el-image :src="icon_adres_01" />
-                        </div></el-col>
-                        <el-col :span="23"><div class="grid-content" style="height: 100%; align-content: center;">
-                            <el-button type="text" style="color: black">&nbsp;Посмотреть на карте<el-icon><DArrowRight /></el-icon></el-button>
-                        </div></el-col>                        
-                    </el-row>   
-                    <el-button type="primary" class="normal_but" disabled>Вступить в группу проекта</el-button> <span> (Доступно зарегистрированным пользователям)</span>
-                    <el-row>
-                        <el-col :span="24"><div class="grid-content border_top">
-                            <h2>Комментарии пользователей:</h2>
-                        </div></el-col>
-                    </el-row>   
 
+                    <el-row>
+                        <el-col :xs="7" :sm="7" :md="5" :lg="3" :xl="3"><div class="grid-content">
+                            <el-image class="circle_img" :src="prg_ban_01" :fit="fit" />
+                        </div></el-col>
+                        <el-col :xs="10" :sm="10"  :md="19" :lg="21" :xl="21"><div class="grid-content">
+                            <span class="txt_big_size">Название проекта </span>
+                            <span>Краткое описание. </span>
+                        </div></el-col>
+                    </el-row> 
+                    <el-row>
+                      <el-col>
+                        <el-button type="primary" class="normal_but" @click="$router.push('/root_see_prez')">Перейти на страницу проекта</el-button>
+                      </el-col>
+                    </el-row>  
                     <!-- Одно сообщение пользователя -->
                     <el-row class="user_small_kard" align="middle">
                         <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3"><div class="grid-content">
@@ -263,11 +241,7 @@
                         </span>
                       </el-col>                    
                     </el-row>       
-                    <el-row>
-                      <el-col>
-                        <el-button type="primary" class="normal_but" @click="$router.push('/root_see_prez_comment')">Перейти на страницу комментариев</el-button>
-                      </el-col>
-                    </el-row>                                        
+                                      
 
 </template>    
 <script lang="ts" setup>
@@ -300,6 +274,7 @@ const fits = [
 const icon_sx_01 = '/sxema_1_02.png'
 const icon_adres_01 = '/icons_address_50.png'
 const user_cir_avatar = '/lenin.jpg'
+const prg_ban_01 = '/us_esher_01.jpg'
 
 const drawer = ref(false)
   const radio = ref(4)

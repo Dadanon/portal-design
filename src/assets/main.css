@@ -188,10 +188,16 @@ margin-top: 15px;
   background: #ffffff;
   padding-bottom: 5px;
 }
+.border_right {
+  border-right: 1px solid #000000;
+}
 
 .border_top {
   border-top: 1px solid #000000;
   padding-bottom: 5px;
+}
+.user_message_margin_left {
+
 }
 
 a,
@@ -217,6 +223,10 @@ a,
   margin-top: 30px;
   display: block; }
 
+  .txt_in_message {
+
+  }
+
   .circle_img {
     border-radius: 300px;
     height: 120px;
@@ -226,19 +236,28 @@ a,
 
   .user_avatar_circle {
     border-radius: 300px;
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
     margin: 15px;
   }
-
+.user_small_kard {
+  max-width: 600px;
+}
   .user_avatar_sm_circle {
     border-radius: 300px;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     margin: 15px;
     align-self: center;
   }
+.txt_in_sm_kard {
 
+}
+.but_in_users_sm_kard::before {
+  content: ' ';
+  margin-left: 5px;
+}
+ 
   .tutor_message {
     border-radius: 8px;
     background: #d4e6b5;
