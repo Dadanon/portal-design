@@ -1,3 +1,1 @@
-<template>
-   Мои группы
-   </template>
+<template>Мои группы</template>

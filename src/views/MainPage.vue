@@ -1,9 +1,7 @@
 <template>
   <el-row>
     <el-col>
-      <span>
-        Не
-      </span>
+      <span> Не </span>
     </el-col>
   </el-row>
 
@@ -14,9 +12,9 @@
   </el-row>
   <el-row>
     <el-col></el-col>
-    <el-col></el-col>    
+    <el-col></el-col>
   </el-row>
-  
+
   <el-button @click="$router.push('/home')"> Смотреть хом </el-button>
   <el-button @click="$router.push('/home')"> Смотреть хом </el-button>
 </template>

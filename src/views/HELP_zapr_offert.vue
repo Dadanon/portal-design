@@ -1,4 +1,1 @@
-<template>
-    Запросы и предложения<br>
-   
-</template>    
+<template>Запросы и предложения<br /></template>

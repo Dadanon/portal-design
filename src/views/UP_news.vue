@@ -1,3 +1,1 @@
-<template>
-    Лента новостей
-   </template>
+<template>Лента новостей</template>

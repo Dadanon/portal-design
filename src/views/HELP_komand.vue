@@ -1,4 +1,1 @@
-<template>
-    Команды<br>
-   
-</template>    
+<template>Команды<br /></template>

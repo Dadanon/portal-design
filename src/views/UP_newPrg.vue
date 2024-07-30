@@ -1,5 +1,1 @@
-<template>
-    Новый проект
-   
-</template>
-
+<template>Новый проект</template>

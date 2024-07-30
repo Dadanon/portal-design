@@ -1,5 +1,5 @@
 <template>
-  хом 
+  хом
   <el-calendar v-model="value" />
 </template>
 

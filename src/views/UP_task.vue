@@ -1,3 +1,1 @@
-<template>
-   Мои задачи
-   </template>
+<template>Мои задачи</template>
